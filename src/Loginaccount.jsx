@@ -20,28 +20,26 @@ function Login() {
           </div>
   
           <div className="w-96 h-[110px] bg-auto border-l-0 b border-2 border-stone-400 ">
-            <form>
-              <label>
-                <input type="text" className="flex justify-end border-2 border-stone-400" />
-              </label>
-            </form>
-            <form>
-              <label>
-                <input type="text" className="flex justify-end border-2 border-stone-400" />
-              </label>
-            </form>
-            <label className="flex justify-start">
+            <form action="" onSubmit={() => navigate('/Createaccount')}>
+                <input type="text" className="flex justify-end border-2 border-stone-400" required />
+                <input type="text" className="flex justify-end border-2 border-stone-400" required />
+                <label className="flex justify-start">
               <input type="checkbox" />
               Save my email and password
             </label>
             <div className="flex justify-start ml-2">
-            <button onClick = {() => navigate('/Createaccount')} className="bg-slate-200 w-[130px] rounded-md">
-              Continue
+            <button  type="submit" className="bg-slate-200 w-[130px] rounded-md">
+              Continue&gt;&gt;
             </button>
             <button className="bg-slate-200 w-[130px] rounded-md ml-3">
               Reset
             </button>
             </div>
+            </form>
+            
+              
+            
+            
             
   
           </div>
