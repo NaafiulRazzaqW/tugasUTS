@@ -14,6 +14,11 @@ export default function Perpustakaan() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!image) return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Tolong Isi Image Anda!",
+      });
     Swal.fire({
       icon: "success",
       title: "Success",
@@ -164,6 +169,12 @@ export default function Perpustakaan() {
                     type="file"
                     id="img"
                     onChange={(e) => {
+                        if(!e.target.files[0]) return
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Tolong Isi Image Anda!",
+                          });
                       setImage(URL.createObjectURL(e.target.files[0] ?? null));
                     }}
                   />
