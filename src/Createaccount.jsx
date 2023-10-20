@@ -24,11 +24,7 @@ function Createaccount() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleChange = (event) => {
-    
-    setName(event.target.value);
-    setEmail(event.target.value)
-  }
+  
 
   const handleSubmit = () => {
     
